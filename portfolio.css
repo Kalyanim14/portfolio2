@@ -192,12 +192,12 @@ a i:hover {
   padding: 15px;
   background: linear-gradient(to top, #c7ad58, #F5EDE1);
   border-radius: 10px;
-  width: 50%;
+  width: 90%;
   border: 1px solid #6F8F7B;
 }
 
 .project-card img{
-width: 300px; 
+width: 550px; 
 } 
 
 .project-card h3{
@@ -379,7 +379,7 @@ textarea{
   width: 100px;
 }
 .project-card img{
-  width: 100px;
+  width: 200px;
 }
 
 form{
