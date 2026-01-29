@@ -21,6 +21,7 @@
         <h2 style="text-align: center;">Aspiring Software Engineer<br>I build clean, responsive web applications using modern technologies.</h2>
         <div style="display: inline-flex;gap: 10px;">
           <button onclick="location.href='#contact'">Contact me</button>
+
           <a href="https://www.linkedin.com/in/kalyani-mantramurthi-562720258/"><i class="fa-brands fa-2x fa-linkedin" aria-label="icon"></i></a>
           <a href="https://www.instagram.com/"><i class="fa-brands fa-2x fa-instagram" width="100px" height="100px"></i></a>
           <a href=""><i class="fa-brands fa-2x fa-x-twitter"></i></a>
@@ -31,45 +32,58 @@
         </div>
     </div>
     <section id="projects" class="section">
-  <h2 class="section-title">Projects</h2>
+      <h2 class="section-title">Projects</h2>
 
-  <div class="projects">
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <img src="./assets/portfolio.png" alt="project1">
-      <p>Responsive personal portfolio built using HTML, CSS and JavaScript.</p>
-      <span>HTML • CSS • JS,</span><br>
-      <button title="https://github.com/Kalyanim14/MINI-PROJECT-FINAL-CODE.git"><a href="">View Project</a></button>
-    </div>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <img src="./assets/portfolio.png" alt="project1">
+          <p>Responsive personal portfolio built using HTML, CSS and JavaScript.</p>
+          <span>HTML • CSS • JS,</span><br>
+          <a href="#home" class="project-btn" target="_blank">View Project</a>
+        </div>
+        <h2>Full Stack Projects</h2>
+        <div class="fullstack">
+          <div class="project-card">
+            <h3> Image Steganography Web App</h3>
+            <img src="./assets/steganography1.png " alt="project2">
+            <img src="./assets/steganography.png" alt="project2">
+            <p> Secure tool to embed/extract hidden messages in images with password protection and cryptographic techniques</p>
+            <span>HTML • CSS • Flask • OpenCV</span><br>
+            <a href="#home" class="project-btn" target="_blank">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3> Smart free Time Utilizer </h3>
+            <img src="./assets/smart.png" alt="project3">
+            <img src="./assets/smart2.png" alt="project3">
+            <p>Smart Free Time Utilizer is an LLM-powered project that helps users make the best use of their free time by suggesting personalized productive activities and schedules based on their interests and available time.</p>
+            <span>• ReactJS • Flask •MySQL </span><br>
+            <a href="https://freetimeutilizer.netlify.app/signin" class="project-btn" target="_blank">View Project</a>
+          </div>
+        </div>
 
-    <div class="project-card">
-      <h3> Image Steganography Web App</h3>
-      <img src="./assets/steganography1.png " alt="project2">
-      <img src="./assets/steganography.png" alt="project2">
-      <p> Secure tool to embed/extract hidden messages in images with password protection and cryptographic techniques</p>
-      <span>HTML • CSS • Flask • OpenCV</span><br>
-      <button title="https://github.com/Kalyanim14/MINI-PROJECT-FINAL-CODE.git"><a href="">View Project</a></button>
-    </div>
+        <h2>Design Projects</h2>
+        <div class="designpro">
+          <div class="project-card">
+            <h3>Ai Scripting Website Design</h3>
+            <img src="./assets/script.png" alt="project4">
+            <img src="./assets/script2.png" alt="project4">
+            <p>AI Scripting Website landing page design is a clean and modern homepage layout that highlights your AI tool’s purpose, shows key features/services in sections, and guides users with clear headings + call-to-action buttons to start generating scripts quickly.</p>
+            <span>• Figma</span><br>
+            <a href="#" class="project-btn" target="_blank">View Project</a>
+          </div>
+          <div class="project-card">
+            <h3>Ai Scripting Website Design</h3>
+            <img src="./assets/sft (1).png" alt="project4">
+            <img src="./assets/sft (2).png" alt="project4">
+            <p>Smart Span website is simliar to Smart Free Time Utilizer, which helps users to generate personalised task recommandations. It contain LogIn, SignUp, Home, History and About Pages</p>
+            <span>• Figma</span><br>
+            <a href="#" class="project-btn" target="_blank">View Project</a>
+        </div>
 
-    <div class="project-card">
-      <h3> Smart free Time Utilizer </h3>
-      <img src="./assets/smart.png" alt="project3">
-      <img src="./assets/smart2.png" alt="project3">
-      <p>Smart Free Time Utilizer is an LLM-powered project that helps users make the best use of their free time by suggesting personalized productive activities and schedules based on their interests and available time.</p>
-      <span>• ReactJS • Flask •MySQL </span><br>
-      <button title="https://freetimeutilizer.netlify.app/signin"><a href="">View Project</a></button>
-    </div>
-
-    <div class="project-card">
-      <h3>Ai Scripting Website Design</h3>
-      <img src="./assets/script.png" alt="project4">
-      <img src="./assets/script2.png" alt="project4">
-      <p>AI Scripting Website landing page design is a clean and modern homepage layout that highlights your AI tool’s purpose, shows key features/services in sections, and guides users with clear headings + call-to-action buttons to start generating scripts quickly.</p>
-      <span>• Figma</span><br>
-      <button title="#"><a href="">View Project</a></button>
-    </div>
-  </div>
-</section>
+        </div>
+      </div>
+    </section>
 <section id="exp" class="section alt">
   <h2 class="section-title">Experience</h2>
 
@@ -152,16 +166,37 @@
   <p style="text-align:center;">
     Let’s connect and build something meaningful together.
   </p>
+  <div class="forms">
   <form>
     <h2>Message Me</h2>
-    <label for="name">Name</label>
-    <input type="text" title="name">
-    <label for="email">Email</label>
-    <input type="text" title="email">
-    <label for="message">Message</label>
-    <textarea title="message"></textarea>
-    <button title="messages">Send Message</button>
+
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Your name">
+
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Your email">
+
+    <label>Message</label>
+    <textarea name="message" placeholder="Your message"></textarea>
+
+    <button type="submit">Send Message</button>
   </form>
+
+  <form>
+    <h2>Get In Touch</h2>
+    <span><i class="fa-solid fa-at"></i>&nbsp;<label for="email">Email</label></span>
+    <a title="email" href="mailto:kalyanimantramurthi@gmail.com">kalyanimantramurthi@gmail.com</a>
+    <hr>
+    <span><i class="fa-brands fa-github"></i>&nbsp;<label for="github">Github</label></span>
+    <a title="github" href="https://github.com/Kalyanim14">Kalyanim14</a>
+    <hr>
+    <span><i class="fa-brands fa-linkedin-in"></i>&nbsp;<label for="linkedin">LinkedIn</label></span>
+    <a title="linkedin" href="https://www.linkedin.com/in/kalyani-mantramurthi-562720258/">Kalyani Mantramurthi</a>
+    <hr>
+    <span><i class="fa-solid fa-file"></i>&nbsp;<label for="resume">Resume</label></span>
+    <a title="resume" href="./assets/kalyaniResume.pdf" download>Download Resume</a>
+  </form>
+  </div>
   <div style="text-align:center; margin-top:20px;">
     <a href="mailto:kalyanimantramurthi@gmail.com">
       <button>Send Email</button>
@@ -170,7 +205,4 @@
 </section>
 
 </body>
-
 </html>
-
-
