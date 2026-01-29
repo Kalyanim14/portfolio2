@@ -133,7 +133,7 @@ a i:hover {
 
 .right img {
   width: 100%;
-  max-width: 380px;
+  max-width: 500px;
   aspect-ratio: 1 / 1;
   object-fit: contain;
   border-radius: 100px;
@@ -431,6 +431,13 @@ a i:hover {
   width: 400px;
   padding: 20px;
 }
+.certificates::-webkit-scrollbar{
+  height: 6px;
+}
+.certificates::-webkit-scrollbar-thumb{
+  background: #8C6A2F;
+  border-radius: 10px;
+}
 
 /* ---------------- CONTACT SECTION ---------------- */
 #contact {
@@ -470,7 +477,12 @@ form {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+form:hover{
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
 }
 
 form h2 {
@@ -572,6 +584,15 @@ form i {
   .left h2 {
     font-size: 16px;
   }
+  .right img {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 100px;
+  transition: transform 0.4s ease;
+  animation: kalyani 2s ease normal;
+}
   .certificates{
   border: 1px solid #c7ad58;
   display: flex;
@@ -601,5 +622,10 @@ form{
   gap: 10px;
   border: 1px solid #8C6A2F;
   border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+form:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
 }
 }
