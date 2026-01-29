@@ -97,7 +97,7 @@ h1:hover {
   margin-top: 10px;
 }
 
-button {
+button, .alt2 a{
   width: 140px;
   height: 50px;
   border-radius: 25px;
@@ -109,7 +109,7 @@ button {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
+button:hover, .alt2 a:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
@@ -141,6 +141,10 @@ a i:hover {
   animation: kalyani 2s ease normal;
 }
 
+.forms{
+  display: flex;
+  gap: 20px;
+}
 @keyframes kalyani{
   from{
     transform: scale(1.4);
@@ -171,48 +175,158 @@ a i:hover {
   background-color: #FBF7F0;
 }
 
-/* --------------- Projects -------------  */
-.projects{
+/* ================= PROJECTS SECTION ================= */
+
+#projects {
+  background: #FBF7F0;
+}
+
+/* main container */
+.projects {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
 }
 
-/* odd cards -> left */
-.project-card:nth-child(odd){
-  align-self: flex-start;
-}
-
-/* even cards -> right */
-.project-card:nth-child(even){
-  align-self: flex-end;
-}
-
-.project-card{
-  padding: 15px;
-  background: linear-gradient(to top, #c7ad58, #F5EDE1);
-  border-radius: 10px;
-  width: 90%;
-  border: 1px solid #6F8F7B;
-}
-
-.project-card img{
-width: 550px; 
-} 
-
-.project-card h3{
+/* subsection headings */
+.projects > h2 {
+  font-size: 26px;
   color: #0F2A1D;
-  -webkit-text-stroke: 0.4px #8C6A2F;
-  padding-bottom: 10px
+  text-align: center;
+  margin: 10px 0;
+  position: relative;
 }
 
-.projects button{
-  background: linear-gradient(to left, #8C6A2F, #0F2A1D);
+.projects > h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #D4AF37;
+  display: block;
+  margin: 8px auto 0;
 }
-.projects a{
-  text-decoration: none;
+
+/* horizontal scroll containers */
+.fullstack,
+.designpro {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 10px 20px 20px;
+  scroll-snap-type: x mandatory;
+  cursor: grab;
+}
+
+/* project card */
+.project-card {
+  background: linear-gradient(to bottom, #F5EDE1, #e6d6b8);
+  border-radius: 18px;
+  padding: 25px;
+  border: 1px solid #8C6A2F;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* desktop card width */
+@media (min-width: 1024px) {
+  .fullstack .project-card,
+  .designpro .project-card {
+    min-width: 520px;
+    max-width: 600px;
+  }
+}
+
+/* tablet */
+@media (max-width: 1023px) {
+  .fullstack .project-card,
+  .designpro .project-card {
+    min-width: 380px;
+    max-width: 420px;
+  }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .fullstack .project-card,
+  .designpro .project-card {
+    min-width: 90%;
+  }
+}
+
+/* card content */
+.project-card h3 {
+  color: #0F2A1D;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.project-card span {
+  font-size: 14px;
+  color: #6F8F7B;
+  font-weight: 500;
+}
+
+.project-card p {
+  margin: 12px 0;
+  color: #2B2B2B;
+  font-size: 15px;
+}
+
+/* images */
+.project-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 10px 0;
+  border: 1px solid #c7ad58;
+  transition: transform 0.4s ease;
+}
+
+.project-card img:hover {
+  transform: scale(1.03);
+}
+
+/* design image scroll */
+.design-scroll {
+  max-height: 350px;
+  overflow-y: auto;
+  border-radius: 12px;
+}
+
+/* project button */
+.project-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #8C6A2F, #0F2A1D);
   color: #F5EDE1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.project-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* smooth scrollbar */
+.fullstack::-webkit-scrollbar,
+.designpro::-webkit-scrollbar {
+  height: 6px;
+}
+
+.fullstack::-webkit-scrollbar-thumb,
+.designpro::-webkit-scrollbar-thumb {
+  background: #8C6A2F;
+  border-radius: 10px;
+}
+
 
 /* ---------------- expS ---------------- */
 .exps {
@@ -318,28 +432,116 @@ width: 550px;
   padding: 20px;
 }
 
-/* ---------------- CONTACT ---------------- */
+/* ---------------- CONTACT SECTION ---------------- */
+#contact {
+  padding: 60px 20px;
+  background-color: #f9f7f3;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2c2c2c;
+}
+
 #contact p {
   text-align: center;
-  color: #8C6A2F;
+  color: #8c6a2f;
+  margin-bottom: 40px;
+  font-size: 1rem;
 }
-form{
+
+/* Forms wrapper */
+.forms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Common form card */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #e6dccb;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 60%;
-  padding: 4%;
-  gap: 10px;
-  border: 1px solid #8C6A2F;
-  border-radius: 15px;
+  gap: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
-input{
-  height: 35px;
-  border-radius: 15px;
+
+form h2 {
+  margin-bottom: 10px;
+  color: #2c2c2c;
+  font-size: 1.4rem;
 }
-textarea{
-  height: 55px;
-  border-radius: 15px;
+
+/* Inputs */
+input,
+textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #8c6a2f;
+}
+
+textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+/* Buttons */
+button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #8c6a2f;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #725522;
+}
+
+/* Get in touch links */
+form span {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+form a {
+  text-decoration: none;
+  color: #8c6a2f;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+/* Icons spacing */
+form i {
+  color: #8c6a2f;
+}
+
+/* Bottom email button */
+#contact > div button {
+  padding: 12px 20px;
 }
 
 /* ---------------- MOBILE ---------------- */
@@ -378,9 +580,17 @@ textarea{
 .certifications img{
   width: 100px;
 }
-.project-card img{
-  width: 200px;
-}
+  .project-card {
+    padding: 18px;
+  }
+
+  .projects > h2 {
+    font-size: 22px;
+  }
+
+  .project-card h3 {
+    font-size: 18px;
+  }
 
 form{
   display: flex;
